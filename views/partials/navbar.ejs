@@ -1,0 +1,25 @@
+<div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl" href="https://www.lego.com/en-in/categories/all-sets">Lego Collection</a>
+    </div>
+  
+    <div class="navbar-center flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a class="<%= (page == '/home') ? 'active' : '' %>" href="/home">Home</a></li>
+        <li><a class="<%= (page == '/about') ? 'active' : '' %>" href="/about">About</a></li>
+        <li><a class="<%= (page == '/addSet') ? 'active' : '' %>" href="/addSet">Add to collection</a></li>
+        <li><a class="<%= (page == '/sets') ? 'active' : '' %>" href="/sets">View Collection</a></li>
+        <li>
+          <details> 
+            <summary>Theme</summary>
+            <ul class="p-2 bg-base-100 right-0">
+              <li><a class="<%= (page == '/classic') ? 'active' : '' %>" href="/classic">Classic</a></li>
+              <li><a class="<%= (page == '/star-wars') ? 'active' : '' %>" href="/star-wars">Star Wars</a></li>
+              <li><a class="<%= (page == '/jurassic-world') ? 'active' : '' %>" href="/jurassic-world">Jurassic</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
