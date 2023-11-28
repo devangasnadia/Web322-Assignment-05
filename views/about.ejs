@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/navbar', { page: '/about' }) %>
+    
+    <div class="container mx-auto">
+        <div class="hero bg-base-200 rounded-lg p-6">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">About Me</h1>
+                    <p class="py-6">Myself</p>
+                </div>
+            </div>
+        </div>
+        <br />
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <img class="w-full" src="https://i0.wp.com/www.afterschoolafrica.com/wp-content/uploads/2018/07/Seneca-College-Canada.jpg?fit=1920%2C1080&ssl=1" alt="Scene" /> 
+            </div>
+            <div class="details">
+                <p>My name is Devang Shashikant Asnadia.</p>
+                <p>I am studying a CPP course at Seneca College.</p>
+                <p>My courses include database management, coding, and web development.</p>
+                <p>I enjoy playing cricket and practicing martial arts.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

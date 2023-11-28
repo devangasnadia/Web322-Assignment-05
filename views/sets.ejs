@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Collection</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl" href="https://www.lego.com/en-in/categories/all-sets">Lego Collection</a>
+        </div>
+        <div class="navbar-center flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="about.html">About</a></li>
+                <li>
+                    <details>
+                        <summary>Theme</summary>
+                        <ul class="p-2 bg-base-100 right-0">
+                            <li><a href="/lego/sets?theme=classic">Classic</a></li>
+                            <li><a href="/lego/sets?theme=star-wars">Star Wars</a></li>
+                            <li><a href="/lego/sets?theme=jurassic-world">Jurassic</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mx-auto">
+      <div class="hero bg-base-200 rounded-lg p-6">
+          <div class="hero-content text-center">
+              <div class="max-w-md">
+                  <h1 class="text-5xl font-bold">Collection</h1>
+              </div>
+          </div>
+      </div>
+      <table class="min-w-full bg-white rounded-xl shadow-md overflow-hidden">
+        <thead class="text-left">
+          <tr>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Theme</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Year</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Num Parts</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+          </tr>
+        </thead>  
+        <tbody>
+          <% sets.forEach(set => { %>
+            <tr>
+              <td><img src="<%= set.img_url %>" alt="<%= set.name %>"></td>
+              <td><%= set.name %></td>
+              <td><a href="/lego/sets?theme=<%= set.theme %>" class="btn btn-primary"><%= set.theme %></a></td>
+              <td><%= set.year %></td>
+              <td><%= set.num_parts %></td>
+              <td><a href="/lego/sets/<%= set.set_num %>" class="btn btn-primary">Details</a></td>4
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>
